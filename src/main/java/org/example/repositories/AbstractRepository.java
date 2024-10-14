@@ -24,7 +24,8 @@ public abstract class AbstractRepository<T> {
     }
 
     public List<T> findAll() {
-        String className = (((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0].getTypeName().split("\\.")[3]);
+        String className = (((ParameterizedType) getClass().getGenericSuperclass())
+                .getActualTypeArguments()[0].getTypeName().split("\\.")[3]);
         return entityManagerPostgres.listAll(
                 "SELECT d FROM " + className  + " d",
                 tClass);

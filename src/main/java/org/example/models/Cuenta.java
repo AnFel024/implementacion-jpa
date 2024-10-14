@@ -10,14 +10,19 @@ import java.util.UUID;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Persona {
+public class Cuenta {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private String nombre;
-    @Column(nullable = false)
-    private Long cedula;
+    private String numeroCuenta;
+    private String banco;
+
+    @OneToOne
+    @JoinTable(name = "cuenta_persona",
+    joinColumns = @JoinColumn(name = "id"),
+    inverseJoinColumns = @JoinColumn(name = "cedula"))
+    private Persona persona;
 }
