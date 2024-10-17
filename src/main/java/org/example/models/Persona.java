@@ -14,10 +14,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    //@Id
+    //private UUID id;
     private String nombre;
+    @Id
     @Column(nullable = false)
     private Long cedula;
 }

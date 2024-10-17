@@ -6,6 +6,7 @@ import jakarta.persistence.Persistence;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.Objects;
 
 public class EntityManagerPostgres<T> {
     @Getter
@@ -27,6 +28,10 @@ public class EntityManagerPostgres<T> {
 
     public List<T> listAll(String query, Class<T> t) {
         return entityManager.createQuery(query, t).getResultList();
+    }
+
+    public T findEntityById(Object id, Class<T> tClass) {
+        return entityManager.find(tClass, id);
     }
 
     public void close() {

@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -19,9 +20,9 @@ public class Departamento {
     private int id;
     private String nombre;
 
-    @ManyToOne
+    @OneToMany
     @JoinTable(name = "departamento_persona",
             joinColumns = @JoinColumn(name = "id"),
             inverseJoinColumns = @JoinColumn(name = "cedula"))
-    private Persona personas;
+    private Set<Persona> personas = new HashSet<>();
 }
