@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="myPU">
-        <class>org.example.models.Persona</class>
-        <class>org.example.models.Departamento</class>
-        <class>org.example.models.Cuenta</class>
-        <class>org.example.models.Capacitacion</class>
+        <class>org.example.models.empresa.Persona</class>
+        <class>org.example.models.empresa.Departamento</class>
+        <class>org.example.models.empresa.Cuenta</class>
+        <class>org.example.models.empresa.Capacitacion</class>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/pruebarelaciones"/>

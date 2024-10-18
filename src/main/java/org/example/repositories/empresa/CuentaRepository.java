@@ -1,9 +1,9 @@
-package org.example.repositories;
+package org.example.repositories.empresa;
 
 
 import org.example.configs.EntityManagerPostgres;
-import org.example.models.Cuenta;
-import org.example.models.Departamento;
+import org.example.models.empresa.Cuenta;
+import org.example.repositories.AbstractRepository;
 
 public class CuentaRepository extends AbstractRepository<Cuenta> {
     public CuentaRepository() {

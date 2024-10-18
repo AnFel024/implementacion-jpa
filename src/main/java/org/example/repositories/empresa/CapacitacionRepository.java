@@ -1,9 +1,9 @@
-package org.example.repositories;
+package org.example.repositories.empresa;
 
 
 import org.example.configs.EntityManagerPostgres;
-import org.example.models.Capacitacion;
-import org.example.models.Departamento;
+import org.example.models.empresa.Capacitacion;
+import org.example.repositories.AbstractRepository;
 
 public class CapacitacionRepository extends AbstractRepository<Capacitacion> {
 

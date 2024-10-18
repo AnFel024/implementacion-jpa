@@ -1,17 +1,15 @@
 package org.example;
 
-import org.example.models.Capacitacion;
-import org.example.models.Cuenta;
-import org.example.models.Departamento;
-import org.example.models.Persona;
-import org.example.repositories.CapacitacionRepository;
-import org.example.repositories.CuentaRepository;
-import org.example.repositories.DepartamentoRepository;
-import org.example.repositories.PersonaRepository;
+import org.example.models.empresa.Capacitacion;
+import org.example.models.empresa.Cuenta;
+import org.example.models.empresa.Departamento;
+import org.example.models.empresa.Persona;
+import org.example.repositories.empresa.CapacitacionRepository;
+import org.example.repositories.empresa.CuentaRepository;
+import org.example.repositories.empresa.DepartamentoRepository;
+import org.example.repositories.empresa.PersonaRepository;
 
 import java.time.LocalTime;
-import java.util.Set;
-import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {

@@ -20,8 +20,9 @@ public abstract class AbstractRepository<T> {
 
     public AbstractRepository(EntityManagerPostgres<T> entityManagerPostgres) {
         this.entityManagerPostgres = entityManagerPostgres;
+        // org.example.models.empresa.Cuenta
         this.className = (((ParameterizedType) getClass().getGenericSuperclass())
-                .getActualTypeArguments()[0].getTypeName().split("\\.")[3]);
+                .getActualTypeArguments()[0].getTypeName().split("\\.")[4]);
     }
 
     public void create(T entity) {

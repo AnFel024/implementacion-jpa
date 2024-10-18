@@ -1,4 +1,4 @@
-package org.example.models;
+package org.example.models.empresa;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
